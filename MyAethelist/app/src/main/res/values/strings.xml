@@ -1,0 +1,35 @@
+<resources>
+    <string name="new_title">标题:</string>
+    <string name="new_settitle">请输入便签标题~</string>
+    <string name="new_content">内容：</string>
+    <string name="new_inputcontent">请输便签入内容~</string>
+    <string name="menu_newnote">新建</string>
+    <string name="menu_exit">退出</string>
+    <string name="login">登录</string>
+    <string name="menu_alarm">设置提醒时间</string>
+    <string name="menu_share">分享便签</string>
+    <string name="app_name">MyAethelist</string>
+    <string name="shr_app_name">Aethelist</string>
+    <string name="shr_hint_username">Username</string>
+    <string name="shr_hint_password">Password</string>
+    <string name="shr_button_next">Next</string>
+    <string name="shr_button_cancel">Cancel</string>
+    <string name="shr_error_password">Password must contain at least 8 characters.</string>
+    <string name="shr_filter_title">Filter</string>
+    <string name="shr_search_title">Search</string>
+    <string name="shr_product_title">种类</string>
+    <string name="shr_product_description">Secondary text</string>
+
+    <!-- Shrine backdrop menu labels -->
+    <string name="shr_featured_label">Featured</string>
+    <string name="shr_apartment_label">Apartment</string>
+    <string name="shr_accessories_label">Accessories</string>
+    <string name="shr_shoes_label">Shoes</string>
+    <string name="shr_tops_label">Tops</string>
+    <string name="shr_bottoms_label">Bottoms</string>
+    <string name="shr_dresses_label">Dresses</string>
+    <string name="shr_account_label">My Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="@color/productGridBackgroundColor"
+        android:paddingStart="@dimen/shr_product_grid_spacing"
+        android:paddingEnd="@dimen/shr_product_grid_spacing"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="3dp"
+                    >
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/isfinished"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="是否已完成"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="24dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="3dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="标题："
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/itemName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:hint="@string/new_settitle"
+                        android:ems="10"
+                        android:textSize="24dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="3dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="种类："
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/catagory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:hint="种类"
+                        android:ems="10"
+                        android:textSize="24dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="重要:  "
+                        android:layout_marginRight="5dp"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                    <SeekBar
+                        android:max="100"
+                        android:id="@+id/priority"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="1dp"
+                        android:minHeight="1dp"
+                        android:progressDrawable="@drawable/seekbar_thumb"
+                        android:thumb="@drawable/seekbar_thumb_bg"/>
+                    <TextView
+                        android:id="@+id/priority_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:hint="值"
+                        android:layout_marginRight="5dp"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/timeRange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="到期模式"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="24dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/time_range_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="到期时间"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/toNotify_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="提醒"
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="24dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/notify_time_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="提醒时间"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/location_place"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="地点备注"
+                        android:textSize="24dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_of_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="事件描述"
+                        android:textSize="24dp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="0dp"
+                android:src="@mipmap/duigou"
+                />
+        </FrameLayout>
+        />
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+<!--
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginLeft="10dp"
+android:layout_marginRight="10dp">
+
+
+<com.google.android.material.chip.ChipGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:id="@+id/tagList">
+
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:id="@+id/chipInGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一定要完成"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:id="@+id/chipInGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="凑合就行"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:id="@+id/chipInGroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="烦死了"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <com.google.android.material.chip.Chip
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:id="@+id/chipInGroup4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="呜呜"
+        android:textAppearance="?android:textAppearanceMedium" />
+</com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>-->
